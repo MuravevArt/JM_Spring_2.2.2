@@ -5,17 +5,19 @@
     <title>Cars</title>
 </head>
 <body>
+<h1>Таблица с машинами:</h1>
 <table border="1">
     <tr>
-        <th>BRAND</th>
-        <th>MODEL</th>
-        <th>YEAR OF ISSUE</th>
+        <th>БРЕНД</th>
+        <th>МОДЕЛЬ</th>
+        <th>ГОД ВЫПУСКА</th>
     </tr>
     <tr th:each="car : ${carsList}">
-        <td th:text="${car.getBrand()}"></td>
-        <td th:text="${car.getModel()}"></td>
-        <td th:text="${car.getYearOfIssue()}"></td>
+        <td th:text="${car.brand}">БРЕНД</td>
+        <td th:text="${car.model}">МОДЕЛЬ</td>
+        <td th:text="${car.yearOfIssue}">ГОД ВЫПУСКА</td>
     </tr>
 </table>
+<a href="/">Для перехода на hello нажмите сюда.</a>
 </body>
 </html>
